@@ -11,15 +11,15 @@
 </head>
 <body>
     <!-- HEADER -->
-    <div id="header" class="section--padding">
+    <div id="header">
         <div id="header__logo">
             <img src="./assets/img/logo.jpg" alt="logo">
-            <h1>My Website</h1>
+            <a href="#home">My Website</a>
         </div>
         <ul id="nav-menu">
             <li><a id="nav__home" href="#home">Trang chủ</a></li>
             <li><a id="nav__product" href="#product">Sản phẩm</a></li>
-            <li><a id="nav__contact" href="#contact">Liên hệ</a></li>
+            <li><a id="nav__contact" href="#contactInfo">Liên hệ</a></li>
         </ul>
         <div id="nav-auth">
             <button id="header__auth-login">Đăng nhập</button>
@@ -27,14 +27,15 @@
     </div>
 
     <!-- HOME SECTION -->
-    <div id="home">
-        <h1 class="sectionTitle">
-        TRANG CHỦ</h1>
-
+    <div id="home" class="section--padding">
+        <img src="./assets/img/homeimg.webp" alt="">
+        <div class="text-content">
+            
+        </div>
     </div>
     
     <!-- ADVERTISE SECTION-->
-    <div id="advert">
+    <div id="advert" class="section--padding">
         <div class="box mt-32">
             <h2>MY WEBSITE SALE SẬP SÀN 5-5</h2>
             <p>Giảm tới 50% toàn bộ các sản phẩm có mặt trên sàn thương mại điện tử My Website vào ngày
@@ -45,24 +46,29 @@
                 style="
                 font-weight: 600;
                 font-style: italic;
-                ">deal.mywebsite.vn</a></p>
-            
+                ">deal.mywebsite.vn</a>
+            </p>
         </div>
     </div>
 
     <!-- PRODUCT SECTION -->
-    <div id="product">
+    <div id="product" class="section--padding">
         <h1 class="sectionTitle">SẢN PHẨM</h1>
+        <div class="highlight">
+            <p>Best seller</p>
+        </div>
         <div id="shirt-container"></div>
     </div>
     
-    <!-- CONTACT SECTION -->
-    <div id="contact">
-
-    </div>
-
-    <!-- FOOTER -->
+    <!-- FOOTER & CONTACT SECTION -->
     <div id="footer">
+        <h1 class="sectionTitle">THÔNG TIN LIÊN HỆ</h1>
+        <ul id="contactInfo">
+            <li>Họ tên: Trần Nhật Thăng</li>
+            <li>Lớp: Công nghệ thông tin 63A</li>
+            <li>Mã sinh viên: 11218483</li>
+            <li>SĐT: 0856918666</li>
+        </ul>
     </div>
 
     <script src="./assets/main.js"></script>
