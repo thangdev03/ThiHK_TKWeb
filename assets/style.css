@@ -14,7 +14,7 @@ html, button, body {
 
 :root {
     --black: #1b2125;
-    --darkGreen: #2D4628;
+    --darkGreen: #355230;
     --darkOrange: #f53e2d;
     --neutralOrange: #f63;
     --pinkOrange: #FFA570;
@@ -141,6 +141,13 @@ html, button, body {
     color: #f53e2d;
 }
 
+.sectionTitle {
+    margin-top: 80px;
+    font-size: 32px;
+    text-align: center;
+    color: var(--darkOrange);
+}
+
 /*---------- HOME SECTION ------------*/
 #advert {
     width: 60%;
@@ -150,5 +157,59 @@ html, button, body {
 }
 
 /*---------- PRODUCT SECTION ------------*/
+#shirt-container {
+    padding: 16px;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.shirt-item {
+    width: 370px;
+    line-height: 1.6;
+    color: var(--black);
+    margin-bottom: 32px;
+}
+
+.shirt-item__img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.shirt-item__name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.shirt-item__price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.shirt-item__desc {
+    font-size: 16px;
+}
+
+.shirt-item__buyBtn {
+    margin-top: 8px;
+    padding: 8px 20px;
+    width: 120px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.shirt-item__buyBtn:hover {
+    background-color: var(--darkGreen);
+    color: white;
+    border-color: transparent;
+}
+
 
 /*---------- FOOTER ------------*/

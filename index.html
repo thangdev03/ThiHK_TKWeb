@@ -11,31 +11,26 @@
 </head>
 <body>
     <!-- HEADER -->
-    <div id="header">
+    <div id="header" class="section--padding">
         <div id="header__logo">
             <img src="./assets/img/logo.jpg" alt="logo">
             <h1>My Website</h1>
         </div>
         <ul id="nav-menu">
-            <li><a id="nav__home" href="#">Trang chủ</a></li>
-            <li><a id="nav__product" href="#">Sản phẩm</a></li>
-            <li><a id="nav__contact" href="#">Liên hệ</a></li>
+            <li><a id="nav__home" href="#home">Trang chủ</a></li>
+            <li><a id="nav__product" href="#product">Sản phẩm</a></li>
+            <li><a id="nav__contact" href="#contact">Liên hệ</a></li>
         </ul>
         <div id="nav-auth">
             <button id="header__auth-login">Đăng nhập</button>
         </div>
     </div>
 
-    <h1 style="
-        margin-top: 80px;
-        font-size: 32px;
-        text-align: center;
-        color: var(--darkOrange);
-    ">
-    MY WEBSITE</h1>
     <!-- HOME SECTION -->
     <div id="home">
-        
+        <h1 class="sectionTitle">
+        TRANG CHỦ</h1>
+
     </div>
     
     <!-- ADVERTISE SECTION-->
@@ -57,16 +52,19 @@
 
     <!-- PRODUCT SECTION -->
     <div id="product">
+        <h1 class="sectionTitle">SẢN PHẨM</h1>
+        <div id="shirt-container"></div>
+    </div>
+    
+    <!-- CONTACT SECTION -->
+    <div id="contact">
 
     </div>
 
-    
     <!-- FOOTER -->
     <div id="footer">
-        <!-- CONTACT SECTION -->
-        <div id="contact">
-    
-        </div>
     </div>
+
+    <script src="./assets/main.js"></script>
 </body>
 </html>
