@@ -38,7 +38,7 @@ html, button, body {
     background-color: white;
     padding: 8px 12px;
     color: #f53e2d;
-    transition: .2s;
+    transition: all .2s ease;
 }
 
 .box a {
@@ -87,8 +87,9 @@ html, button, body {
 }
 
 #header__logo {
+    width: 180px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     cursor: pointer;
 }
@@ -110,7 +111,8 @@ html, button, body {
 #nav-menu {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    /* width: 400px; */
 }
 
 #nav-menu li a, 
@@ -121,23 +123,28 @@ html, button, body {
 }
 
 #nav-menu li {
-    margin: 0 16px;
     cursor: pointer;
+    width: 140px;
+    text-align: center;
+    transition: all .3s linear;
+    border-radius: 12px;
+}
+
+#nav-menu li:hover {
+    background: linear-gradient(-180deg, #f63, #ee8076);
 }
 
 #nav-menu li a {
     text-decoration: none;
     padding: 0 16px;
     line-height: 56px;
-    transition: .3s;
 }
 
 #nav-menu li:hover a {
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 #nav-auth {
-    width: 182px;
     text-align: right;
 }
 
@@ -158,7 +165,7 @@ html, button, body {
 
 /*---------- HOME SECTION ------------*/
 #home {
-   
+   padding-top: 56px;
 }
 
 #home img {
@@ -176,6 +183,10 @@ html, button, body {
 }
 
 /*---------- PRODUCT SECTION ------------*/
+#product {
+    padding-bottom: 200px;
+}
+
 .highlight p {
     line-height: 50px;
     color: white;
@@ -199,10 +210,21 @@ html, button, body {
     margin-bottom: 32px;
 }
 
-.shirt-item__img {
+.shirt-item__imgContainer {
+    height: 555px;
+    margin-bottom: 8px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.shirt-item__imgContainer img {
     width: 100%;
     border-radius: 10px;
-    object-fit: cover;
+    transition: all .4s ease;
+}
+
+.shirt-item__imgContainer img:hover {
+    transform: scale(1.5);
 }
 
 .shirt-item__name {
@@ -256,4 +278,19 @@ html, button, body {
     color: white;
     line-height: 1.6;
     text-align: center;
+}
+
+/*--------- RESPONSIVE ---------*/
+@media (max-width: 768px) {
+    #nav-menu li {
+        width: 106px;
+    }
+
+    .shirt-item__imgContainer img {
+        transform: scale(1.2);
+    }
+
+    .shirt-item__buyBtn {
+        width: 100%;
+    }
 }
