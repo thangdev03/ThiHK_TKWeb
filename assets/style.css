@@ -46,13 +46,14 @@ html, button, body {
 }
 
 .box:hover {
-    background-color: var(--pinkOrange);
+    background-color: rgba(255, 102, 51, 0.9);
     color: white;
     border-color: var(--pastelYellow);
 }
 
 .box:hover a {
     color: rgb(81, 84, 255);
+    color: var(--pastelYellow);
 }
 
 .mt-32 {
@@ -83,7 +84,8 @@ html, button, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(-180deg,#f53e2d,#f63);
+    background: linear-gradient(-180deg,#355230,#466d40);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #header__logo {
@@ -131,7 +133,8 @@ html, button, body {
 }
 
 #nav-menu li:hover {
-    background: linear-gradient(-180deg, #f63, #ee8076);
+    /* background: linear-gradient(-180deg, #f63, #ee8076); */
+    background: var(--neutralOrange);
 }
 
 #nav-menu li a {
@@ -160,7 +163,7 @@ html, button, body {
 
 #nav-auth button:hover {
     background-color: whitesmoke;
-    color: #f53e2d;
+    color: #4e7547;
 }
 
 /*---------- HOME SECTION ------------*/
@@ -281,11 +284,8 @@ html, button, body {
 }
 
 /*--------- RESPONSIVE ---------*/
+/* MOBILE & TABLET */
 @media (max-width: 768px) {
-    #nav-menu li {
-        width: 106px;
-    }
-
     .shirt-item__imgContainer img {
         transform: scale(1.2);
     }
@@ -293,4 +293,16 @@ html, button, body {
     .shirt-item__buyBtn {
         width: 100%;
     }
+}
+
+/* TABLET */
+@media (max-width: 768px) and (min-width: 426px) {
+    #nav-menu li {
+        width: 106px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 425px) {
+    
 }
