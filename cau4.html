@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="icon" href="./assets/img/image.jpg">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat?preview.text=G&preview.text_type=custom&category=Sans+Serif&subset=vietnamese&noto.script=Latn">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html, button, body {
+            font-family: 'montserrat';
+        }
+
+        :root {
+            --black: #1b2125;
+            --darkGreen: #355230;
+            --redOrange: #f53e2d;
+            --neutralOrange: #f63;
+            --pinkOrange: #FFA570;
+            --pastelYellow: #FAD074;
+        }
+
+        .highlight {
+            width: 300px;
+            height: 50px;
+            background-color: var(--pastelYellow);
+            margin: auto;
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .mt-32 {
+            margin-top: 32px !important;
+        }
+
+        .section--padding {
+            padding-top: 10px;
+        }
+
+        .sectionTitle {
+            margin-top: 80px;
+            font-size: 32px;
+            text-align: center;
+            color: var(--redOrange);
+        }
+
+        /*---------- HEADER ------------*/
+        #header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            height: 56px;
+            width: 100%;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(-180deg,#355230,#466d40);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #header__logo {
+            width: 180px;
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #header__logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        #header__logo a {
+            margin-left: 8px;
+            color: white;
+            font-size: 24px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #nav-menu {
+            list-style: none;
+            display: flex;
+            /* justify-content: space-evenly; */
+            /* width: 400px; */
+        }
+
+        #nav-menu li a, 
+        #nav-auth button {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #nav-menu li {
+            cursor: pointer;
+            width: 140px;
+            text-align: center;
+            transition: all .3s linear;
+            border-radius: 12px;
+        }
+
+        #nav-menu li:hover {
+            /* background: linear-gradient(-180deg, #f63, #ee8076); */
+            background: var(--neutralOrange);
+        }
+
+        #nav-menu li a {
+            text-decoration: none;
+            padding: 18px 26px;
+            line-height: 56px;
+        }
+
+        #nav-menu li:hover a {
+            /* opacity: 0.8; */
+        }
+
+        #nav-auth {
+            text-align: right;
+        }
+
+        #nav-auth button {
+            line-height: 32px;
+            padding: 0 16px;
+            border: 1px solid white;
+            border-radius: 50px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        #nav-auth button:hover {
+            background-color: whitesmoke;
+            color: #4e7547;
+        }
+
+        /*---------- HOME SECTION ------------*/
+        #home {
+           padding-top: 56px;
+        }
+
+        #home img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /*---------- ADVERTISE SECTION ------------*/
+        #advert {
+            margin-top: 32px;
+            padding: 8px 48px;
+            color: var(--black);
+            background-color: var(--darkGreen);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #advert img {
+            height: 120px;
+        }
+
+        #advert > div {
+            margin-left: 32px;
+            margin-right: 32px;
+            width: 50%;
+        }
+
+        .box {
+            width: 100%;
+            height: 200px;
+            padding: 16px;
+            border: 2px dashed white;
+            border-radius: 5px;
+            background-color: var(--darkGreen);
+            color: white;
+            text-align: center;
+            line-height: 1.4;
+            transition: all .2s ease;
+        }
+
+        .box h2 {
+            font-weight: 500;
+        }
+
+        .box h1 {
+            font-size: 48px;
+        }
+
+        .box p {
+            font-weight: 500;
+        }
+
+        .box button {
+            margin-top: 8px;
+            width: 150px;
+            line-height: 38px;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: #ecba4c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .box:hover {
+            background-color: #f3ce53;
+            color: var(--redOrange);
+            border-color: whitesmoke;
+        }
+
+        .box:hover button {
+            background-color: var(--redOrange);
+        }
+
+        /*---------- PRODUCT SECTION ------------*/
+        #product {
+            padding-bottom: 200px;
+        }
+
+        .highlight p {
+            line-height: 50px;
+            color: white;
+            letter-spacing: 5px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        #shirt-container {
+            padding: 16px;
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .shirt-item {
+            width: 370px;
+            line-height: 1.6;
+            color: var(--black);
+            margin-bottom: 32px;
+        }
+
+        .shirt-item__imgContainer {
+            height: 555px;
+            margin-bottom: 8px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .shirt-item__imgContainer img {
+            width: 100%;
+            border-radius: 10px;
+            transition: all .4s ease;
+        }
+
+        .shirt-item__imgContainer img:hover {
+            transform: scale(1.5);
+        }
+
+        .shirt-item__name {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .shirt-item__price {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .shirt-item__desc {
+            font-size: 16px;
+        }
+
+        .shirt-item__buyBtn {
+            margin-top: 8px;
+            padding: 8px 20px;
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        .shirt-item__buyBtn:hover {
+            background-color: var(--darkGreen);
+            color: white;
+            border-color: transparent;
+        }
+
+
+        /*---------- FOOTER ------------*/
+        #footer {
+            padding: 16px 32px 80px;
+            background-color: var(--darkGreen);
+        }
+
+        .footer__title {
+            margin-top: 0;
+            color: var(--pastelYellow);
+            font-size: 32px;
+            text-align: center;
+        }
+
+        #contactInfo {
+            margin-top: 12px;
+            list-style: none;
+            color: white;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /*--------- RESPONSIVE ---------*/
+        /* MOBILE & TABLET */
+        @media (max-width: 768px) {
+            .shirt-item__imgContainer img {
+                transform: scale(1.2);
+            }
+        
+            .shirt-item__buyBtn {
+                width: 100%;
+            }
+
+            .box h1 {
+               font-size: 32px;
+            }
+        }
+
+        /* TABLET */
+        @media (max-width: 768px) and (min-width: 426px) {
+            #nav-menu li {
+                width: auto;
+            }
+
+            #advert img {
+                height: 80px;
+            }         
+        }
+
+        /* MOBILE */
+        @media (max-width: 425px) {
+            #nav-menu {
+                display: none;
+            }
+
+            #advert {
+                flex-direction: column;
+            }
+
+            #advert > div {
+                margin-top: 16px;
+                width: 100%;
+            }
+
+            #advert img {
+                height: 40px;
+            }
+
+            #advert img:last-child {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header">
+        <div id="header__logo">
+            <img src="./assets/img/image.jpg" alt="logo">
+            <a href="#home">Teemate</a>
+        </div>
+        <ul id="nav-menu">
+            <li><a id="nav__home" href="#home">Trang chủ</a></li>
+            <li><a id="nav__product" href="#product">Sản phẩm</a></li>
+            <li><a id="nav__contact" href="#contactInfo">Liên hệ</a></li>
+        </ul>
+        <div id="nav-auth">
+            <button id="header__auth-login">Đăng nhập</button>
+        </div>
+    </div>
+
+    <!-- HOME SECTION -->
+    <div id="home">
+        <img src="./assets/img/homeimg.webp" alt="">
+        <div class="text-content">
+            
+        </div>
+    </div>
+    
+    <!-- ADVERTISE SECTION-->
+    <div id="advert" class="section--padding">
+        <img src="./assets/img/sale.png" alt="">
+        <div>
+            <div class="box">
+                <h2>MEGA SALE</h2>
+                <h1>UP TO 50%</h1>
+                <p>Chương trình khuyến mãi áp dụng tới 10/05/2023</p>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+        <img src="./assets/img/sale.png" alt="">
+    </div>
+
+    <!-- PRODUCT SECTION -->
+    <div id="product" class="section--padding">
+        <h1 class="sectionTitle">SẢN PHẨM</h1>
+        <div class="highlight">
+            <p>Best seller</p>
+        </div>
+        <div id="shirt-container"></div>
+    </div>
+    
+    <!-- FOOTER & CONTACT SECTION -->
+    <div id="footer">
+        <h1 class="footer__title">THÔNG TIN LIÊN HỆ</h1>
+        <ul id="contactInfo">
+            <li>Họ tên: Trần Nhật Thăng</li>
+            <li>Lớp: Công nghệ thông tin 63A</li>
+            <li>Mã sinh viên: 11218483</li>
+            <li>SĐT: 0856918666</li>
+        </ul>
+    </div>
+
+    
+    <!-- JAVASCRIPT -->
+    <script>
+        const shirtContainer = document.getElementById("shirt-container");
+        const shirtItems = [
+            {
+                image: './assets/img/Tshirt01.jpg',
+                name: 'Áo Marvel Big Logo',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu đen, size M/L/XL',
+            },
+            {
+                image: './assets/img/Tshirt02.jpg',
+                name: 'Áo thun Captain America',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu xanh than, size M/L/XL',
+            },
+            {
+                image: './assets/img/Tshirt03.jpg',
+                name: 'Áo thun Marvel Hulk',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu xanh lam, size M/L/XL',
+            },
+            {
+                image: './assets/img/Tshirt04.jpg',
+                name: 'Áo thun Marvel Thor Mjolnir',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu trắng, size M/L/XL',
+            }
+        ]
+        
+        // Print list of item 
+        for (const shirtItem of shirtItems) {
+            const shirtItemDiv = document.createElement('div');
+            shirtItemDiv.classList.add('shirt-item');
+            shirtItemDiv.innerHTML = `
+                <div class="shirt-item__imgContainer"><img src="${shirtItem.image}" alt="${shirtItem.name}"></div>
+                <h1 class="shirt-item__name">${shirtItem.name}</h1>
+                <p class="shirt-item__price">${shirtItem.price}</p>
+                <p class="shirt-item__desc">${shirtItem.desc}</p>
+                <button class="shirt-item__buyBtn">Mua hàng</button>
+            `;
+            shirtContainer.appendChild(shirtItemDiv);
+        }
+    </script>
+</body>
+</html>

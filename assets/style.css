@@ -9,13 +9,13 @@ html {
 }
 
 html, button, body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: 'montserrat';
 }
 
 :root {
     --black: #1b2125;
     --darkGreen: #355230;
-    --darkOrange: #f53e2d;
+    --redOrange: #f53e2d;
     --neutralOrange: #f63;
     --pinkOrange: #FFA570;
     --pastelYellow: #FAD074;
@@ -30,32 +30,6 @@ html, button, body {
     text-align: center;
 }
 
-.box {
-    width: 100%;
-    height: 200px;
-    border: 2px dashed var(--darkGreen);
-    border-radius: 5px;
-    background-color: white;
-    padding: 8px 12px;
-    color: #f53e2d;
-    transition: all .2s ease;
-}
-
-.box a {
-    color: #f53e2d;
-}
-
-.box:hover {
-    background-color: rgba(255, 102, 51, 0.9);
-    color: white;
-    border-color: var(--pastelYellow);
-}
-
-.box:hover a {
-    color: rgb(81, 84, 255);
-    color: var(--pastelYellow);
-}
-
 .mt-32 {
     margin-top: 32px !important;
 }
@@ -68,7 +42,7 @@ html, button, body {
     margin-top: 80px;
     font-size: 32px;
     text-align: center;
-    color: var(--darkOrange);
+    color: var(--redOrange);
 }
 
 /*---------- HEADER ------------*/
@@ -179,10 +153,71 @@ html, button, body {
 
 /*---------- ADVERTISE SECTION ------------*/
 #advert {
-    width: 60%;
-    margin: auto;
-    text-align: center;
+    margin-top: 32px;
+    padding: 8px 48px;
     color: var(--black);
+    background-color: var(--darkGreen);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#advert img {
+    height: 120px;
+}
+
+#advert > div {
+    margin-left: 32px;
+    margin-right: 32px;
+    width: 50%;
+}
+
+.box {
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+    border: 2px dashed white;
+    border-radius: 5px;
+    background-color: var(--darkGreen);
+    color: white;
+    text-align: center;
+    line-height: 1.4;
+    transition: all .2s ease;
+}
+
+.box h2 {
+    font-weight: 500;
+}
+
+.box h1 {
+    font-size: 48px;
+}
+
+.box p {
+    font-weight: 500;
+}
+
+.box button {
+    margin-top: 8px;
+    width: 150px;
+    line-height: 38px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #ecba4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.box:hover {
+    background-color: #f3ce53;
+    color: var(--redOrange);
+    border-color: whitesmoke;
+}
+
+.box:hover button {
+    background-color: var(--redOrange);
 }
 
 /*---------- PRODUCT SECTION ------------*/
@@ -247,7 +282,6 @@ html, button, body {
 .shirt-item__buyBtn {
     margin-top: 8px;
     padding: 8px 20px;
-    width: 120px;
     background-color: transparent;
     font-size: 16px;
     font-weight: 500;
@@ -266,21 +300,22 @@ html, button, body {
 
 /*---------- FOOTER ------------*/
 #footer {
-    padding: 16px 16px 80px;
+    padding: 16px 32px 80px;
     background-color: var(--darkGreen);
 }
 
-#footer .sectionTitle {
-    margin-top: 0 !important;
+.footer__title {
+    margin-top: 0;
     color: var(--pastelYellow);
+    font-size: 32px;
 }
 
 #contactInfo {
-    margin-top: 16px;
+    margin-top: 12px;
     list-style: none;
     color: white;
     line-height: 1.6;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /*--------- RESPONSIVE ---------*/

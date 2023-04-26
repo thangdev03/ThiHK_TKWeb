@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3</title>
+</head>
+<body>
+    <div id="shirt-container"></div>
+
+    <script>
+        const shirtContainer = document.getElementById("shirt-container");
+        const shirtItems = [
+            {
+                name: 'Áo Marvel Big Logo',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu đen, size M/L/XL',
+            },
+            {
+                name: 'Áo thun Captain America',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu xanh than, size M/L/XL',
+            },
+            {
+                name: 'Áo thun Marvel Hulk',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu xanh lam, size M/L/XL',
+            },
+            {
+                name: 'Áo thun Marvel Thor Mjolnir',    
+                price: '299.000đ',
+                desc: 'Áo thun, oversize, màu trắng, size M/L/XL',
+            }
+        ]
+        
+        // Print list of item 
+        for (const shirtItem of shirtItems) {
+            const shirtItemDiv = document.createElement('div');
+            shirtItemDiv.classList.add('shirt-item');
+            shirtItemDiv.innerHTML = `
+                <h1 class="shirt-item__name">${shirtItem.name}</h1>
+                <p class="shirt-item__price">${shirtItem.price}</p>
+                <p class="shirt-item__desc">${shirtItem.desc}</p>
+            `;
+            shirtContainer.appendChild(shirtItemDiv);
+        }
+    </script>
+</body>
+</html>
